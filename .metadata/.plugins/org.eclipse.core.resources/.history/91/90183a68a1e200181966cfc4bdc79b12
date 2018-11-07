@@ -1,0 +1,47 @@
+package br.msansone.testEJB;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import br.msansone.testEJB.Model.Mensagem;
+
+public class DataAccess {
+	
+    private static final String PERSISTENCE_UNIT_NAME = "test";
+    private static EntityManagerFactory factory;
+    
+	public static void gravarMensagem(String mensagem)
+	{
+		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+        EntityManager em = factory.createEntityManager();
+
+        // create new todo
+        em.getTransaction().begin();
+        
+        Mensagem mensagem1 = new Mensagem();
+        mensagem1.setConteudo(mensagem);
+       
+        
+        em.persist(mensagem1);
+        em.getTransaction().commit();
+        
+        
+        
+//      // read the existing entries and write to console
+//      Query q = em.createQuery("select t from Mensagem t");
+//      List<Mensagem> todoList = q.getResultList();
+//      for (Mensagem todo : todoList) {
+//          System.out.println(todo);
+//      }
+//      System.out.println("Size: " + todoList.size());
+        
+
+        em.close();
+
+	}
+
+}

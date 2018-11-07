@@ -1,0 +1,6 @@
+#Wed Nov 07 12:10:23 GMT 2018
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=enable autocomplete

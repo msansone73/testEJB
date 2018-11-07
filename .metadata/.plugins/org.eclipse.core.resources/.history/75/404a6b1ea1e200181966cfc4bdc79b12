@@ -1,0 +1,26 @@
+package br.msansone.testEJB.Model;
+
+
+import javax.persistence.Entity;
+
+
+@Entity
+public class Mensagem {
+    private String conteudo;
+    
+    public Mensagem() {
+    	super();
+    	}
+    
+    public String getConteudo() {
+		return conteudo;
+	}
+	public void setConteudo(String conteudo) {
+		this.conteudo=conteudo;
+	}
+	@Override
+	public String toString() {
+		return "Mensagem [ conteudo=" + conteudo + "]";
+	}
+	
+}

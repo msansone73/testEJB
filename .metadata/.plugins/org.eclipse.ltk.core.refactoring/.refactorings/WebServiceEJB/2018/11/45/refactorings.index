@@ -1,0 +1,17 @@
+1541591956938	Rename local variable 'ValFuturo'
+1541591977749	Delete element
+1541592028527	Rename local variable 'r'
+1541601740328	Encapsulate field 'conteudo'
+1541607067750	Move compilation unit
+1541607877043	Move compilation unit
+1541607951576	Move compilation unit
+1541608017267	Move compilation unit
+1541608027242	Rename package 'br.msansone.testEJB.Model'
+1541608250075	Move compilation unit
+1541608412725	Move compilation unit
+1541608492181	Move compilation unit
+1541608562946	Delete element
+1541608566020	Delete element
+1541608600300	Rename package 'br.msansone.testEJB.model'
+1541608609315	Move compilation unit
+1541609733531	Infer generic type arguments

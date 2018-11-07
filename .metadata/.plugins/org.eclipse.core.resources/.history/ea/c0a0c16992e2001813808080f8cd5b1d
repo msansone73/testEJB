@@ -1,0 +1,11 @@
+package br.msansone.testEJB;
+
+public class DataAccess {
+	
+	private static void gravarMensagem(String mensagem)
+	{
+		
+
+	}
+
+}
