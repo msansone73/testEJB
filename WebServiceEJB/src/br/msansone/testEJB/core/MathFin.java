@@ -6,8 +6,6 @@ public class MathFin {
 
 	public static Resultado calculaJuros(Double valor, Double juros, Integer anos) {
 
-		System.out.println("calculaJuros(" + valor + ", " + juros + ", " + anos + " )");
-
 		juros = juros / 100;
 
 		Double valFuturo;

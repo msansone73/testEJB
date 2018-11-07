@@ -18,21 +18,12 @@ public class DataAccess {
 		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 		EntityManager em = factory.createEntityManager();
 
-		// create new todo
 		em.getTransaction().begin();
 
 		Mensagem mensagem1 = new Mensagem();
 		mensagem1.setConteudo(mensagem);
 		em.persist(mensagem1);
 		em.getTransaction().commit();
-
-		// read the existing entries and write to console
-		Query q = em.createQuery("select t from Mensagem t");
-		List<Mensagem> todoList = q.getResultList();
-		for (Mensagem todo : todoList) {
-			System.out.println(todo);
-		}
-		System.out.println("Size: " + todoList.size());
 
 		em.close();
 
@@ -54,11 +45,8 @@ public class DataAccess {
 
 		for (Mensagem todo : todoList) {
 			saida = todo.getConteudo();
-			System.out.println(todo);
 		}
-
 		em.close();
-
 		return saida;
 	}
 
