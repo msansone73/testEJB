@@ -1,6 +1,6 @@
 package br.msansone.testEJB.Model;
 
-public class Resultado {
+public class Resultado extends Retorno {
 
 	private double valFuturo;
 	private double valJuros;

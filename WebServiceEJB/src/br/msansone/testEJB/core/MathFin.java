@@ -20,6 +20,9 @@ public class MathFin {
 		resultado.setValFuturo(valFuturo);
 		resultado.setValJuros(valJurosTotais);
 		resultado.setValJurosAnos(valJurosAno);
+		resultado.setReturnValue(0);
+		resultado.setReturnDescription("");
+		resultado.setTrack("");
 
 		return resultado;
 	}

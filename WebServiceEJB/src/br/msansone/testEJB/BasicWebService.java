@@ -20,7 +20,7 @@ public class BasicWebService {
 
 	@WebMethod
 	public String criarMensagem(@WebParam(name = "nome") String nome) {
-		return "Ola " + nome + " seja bem vinda a critical! 0.26 " + System.currentTimeMillis();
+		return "Ola " + nome + " seja bem vinda a critical! 0.28 " + System.currentTimeMillis();
 	}
 
 	@WebMethod
