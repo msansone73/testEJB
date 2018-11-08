@@ -2,8 +2,11 @@ package br.msansone.testEJB.dataAccess;
 
 import java.util.List;
 
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 public class DataAccess<E> {
 	
@@ -24,6 +27,7 @@ public class DataAccess<E> {
 		
 	}
 	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void gravarDados(EntityManager em, Object entidade) {
 
 		em.persist(entidade);

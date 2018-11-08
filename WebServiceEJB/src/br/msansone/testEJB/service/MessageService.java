@@ -2,10 +2,14 @@ package br.msansone.testEJB.service;
 
 import java.util.List;
 
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.naming.InitialContext;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.transaction.TransactionManager;
 
 import br.msansone.testEJB.Model.Mensagem;
 import br.msansone.testEJB.dataAccess.DataAccess;
@@ -33,9 +37,10 @@ public class MessageService {
 		return mensagens.size()==0?null:mensagens.get(0);
 	}
 	
-	
-	public void gravarMensage(Mensagem mensagem){
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void gravarMensage(Mensagem mensagem){	
+		
 		DataAccess<Mensagem> dataAccess = new DataAccess<>();
-		dataAccess.gravarDados(em,mensagem);		
+		dataAccess.gravarDados(em,mensagem);
 	}
 }

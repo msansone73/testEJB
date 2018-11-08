@@ -7,8 +7,6 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
-import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
-
 import br.msansone.testEJB.Model.Mensagem;
 import br.msansone.testEJB.Model.Resultado;
 import br.msansone.testEJB.core.MathFin;
@@ -23,7 +21,7 @@ public class BasicWebService {
 
 	@WebMethod
 	public String criarMensagem(@WebParam(name = "nome") String nome) {
-		return "Ola " + nome + " seja bem vinda a critical! 1.3 " + System.currentTimeMillis();
+		return "Ola " + nome + " seja bem vinda a critical! 1.21 " + System.currentTimeMillis();
 	}
 
 	@WebMethod
@@ -36,10 +34,10 @@ public class BasicWebService {
 	}
 
 	@WebMethod
-	public String gravarMensagem(@WebParam(name = "mensagem") String mensagem) {
-
-		DataAccess.gravarMensagem(mensagem);
-		return "A mensagem: " + mensagem + " foi salva com sucesso.";
+	public void gravarMensagem(@WebParam(name = "mensagem") String mensagem) {
+	
+		MessageService messageService = new MessageService();
+		messageService.gravarMensage(new Mensagem(mensagem));
 	}
 
 	@WebMethod
@@ -53,6 +51,7 @@ public class BasicWebService {
 	@WebMethod
 	public List<Mensagem> consultaTodasMensagens() {
 		
+
 		MessageService messageService = new MessageService();
 		return  messageService.listarTodas();
 

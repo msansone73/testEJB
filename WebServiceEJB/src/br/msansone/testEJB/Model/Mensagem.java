@@ -12,7 +12,17 @@ public class Mensagem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String conteudo;
-    public String getConteudo() {
+    
+    
+    
+    public Mensagem() {
+	}
+    
+    public Mensagem(String conteudo) {
+		this.conteudo = conteudo;
+	}
+    
+	public String getConteudo() {
 		return conteudo;
 	}
 	public void setConteudo(String conteudo) {

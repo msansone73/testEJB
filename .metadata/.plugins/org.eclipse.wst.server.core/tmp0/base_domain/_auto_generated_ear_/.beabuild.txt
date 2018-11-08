@@ -1,3 +1,0 @@
-C\:/Users/m-sansone/Documents/Git/testEJB/WebServiceEJB/WebContent = WebServiceEJB.war
-C\:/Users/m-sansone/Documents/Git/testEJB/.metadata/.plugins/org.eclipse.core.resources/WebServiceEJB/build/weboutput = WebServiceEJB.war
-C\:/Users/m-sansone/Documents/Git/testEJB/WebServiceEJB/build/classes = WebServiceEJB.war/WEB-INF/classes
