@@ -1,0 +1,5 @@
+package br.msansone.testEJB.service;
+
+public class MessageService {
+
+}

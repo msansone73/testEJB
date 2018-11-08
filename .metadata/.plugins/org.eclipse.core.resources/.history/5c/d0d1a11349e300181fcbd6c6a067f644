@@ -1,0 +1,14 @@
+package br.msansone.testEJB.service;
+
+import br.msansone.testEJB.Model.Mensagem;
+import br.msansone.testEJB.dataAccess.DataAccess;
+
+public class MessageService {
+	
+	public List<Mensagem> listarTodas(){
+		DataAccess<Mensagem> dataAccess = new DataAccess<>();
+		return dataAccess.lerDados(em, "select t from Mensagem t ");
+		
+	}
+
+}

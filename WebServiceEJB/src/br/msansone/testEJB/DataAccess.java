@@ -29,38 +29,38 @@ public class DataAccess {
 
 	}
 
-	public static String lerMensagem(Long id) {
-		String saida = "";
+//	public static String lerMensagem(Long id) {
+//		String saida = "";
+//
+//		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+//		EntityManager em = factory.createEntityManager();
+//
+//		// read the existing entries and write to console
+//		Query q = em.createQuery("select t from Mensagem t where t.id=:id").setParameter("id", id);
+//		List<Mensagem> todoList = q.getResultList();
+//
+//		if (todoList.size() == 0) {
+//			return saida;
+//		}
+//
+//		for (Mensagem todo : todoList) {
+//			saida = todo.getConteudo();
+//		}
+//		em.close();
+//		return saida;
+//	}
 
-		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-		EntityManager em = factory.createEntityManager();
-
-		// read the existing entries and write to console
-		Query q = em.createQuery("select t from Mensagem t where t.id=:id").setParameter("id", id);
-		List<Mensagem> todoList = q.getResultList();
-
-		if (todoList.size() == 0) {
-			return saida;
-		}
-
-		for (Mensagem todo : todoList) {
-			saida = todo.getConteudo();
-		}
-		em.close();
-		return saida;
-	}
-
-	public static List<Mensagem> lerTodasMensagens() {
-		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-		EntityManager em = factory.createEntityManager();
-
-		// read the existing entries and write to console
-		Query q = em.createQuery("select t from Mensagem t ");
-
-		List<Mensagem> mensagens =  q.getResultList();
-		em.close();
-
-		return mensagens;
-	}
+//	public static List<Mensagem> lerTodasMensagens() {
+//		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+//		EntityManager em = factory.createEntityManager();
+//
+//		// read the existing entries and write to console
+//		Query q = em.createQuery("select t from Mensagem t ");
+//
+//		List<Mensagem> mensagens =  q.getResultList();
+//		em.close();
+//
+//		return mensagens;
+//	}
 
 }

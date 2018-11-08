@@ -3,4 +3,6 @@
 <fullyQualifiedTypeName name="javax.jws.WebParam"/>
 <fullyQualifiedTypeName name="br.msansone.testEJB.Model.Mensagem"/>
 <fullyQualifiedTypeName name="br.msansone.testEJB.DataAccess"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.Model.Retorno"/>
 </qualifiedTypeNameHistroy>

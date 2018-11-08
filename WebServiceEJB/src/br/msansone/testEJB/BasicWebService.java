@@ -7,9 +7,12 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
+import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+
 import br.msansone.testEJB.Model.Mensagem;
 import br.msansone.testEJB.Model.Resultado;
 import br.msansone.testEJB.core.MathFin;
+import br.msansone.testEJB.service.MessageService;
 
 @Stateless
 @WebService
@@ -20,7 +23,7 @@ public class BasicWebService {
 
 	@WebMethod
 	public String criarMensagem(@WebParam(name = "nome") String nome) {
-		return "Ola " + nome + " seja bem vinda a critical! 0.28 " + System.currentTimeMillis();
+		return "Ola " + nome + " seja bem vinda a critical! 1.3 " + System.currentTimeMillis();
 	}
 
 	@WebMethod
@@ -42,18 +45,16 @@ public class BasicWebService {
 	@WebMethod
 	public String consultaMensagem(@WebParam(name = "id") Long id) {
 
-		String mensagem = DataAccess.lerMensagem(id);
-		if (mensagem.length() == 0) {
-			return "Mensagem não encontrada.";
-		}
-
-		return "A mensagem de id= " + id + " é " + mensagem + " ." + System.currentTimeMillis();
+		MessageService messageService = new MessageService();
+		return  messageService.retornarMensage(id).getConteudo();
+		
 	}
 
 	@WebMethod
 	public List<Mensagem> consultaTodasMensagens() {
-
-		return DataAccess.lerTodasMensagens();
+		
+		MessageService messageService = new MessageService();
+		return  messageService.listarTodas();
 
 	}
 }

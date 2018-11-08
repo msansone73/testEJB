@@ -1,0 +1,11 @@
+#Thu Nov 08 10:28:15 GMT 2018
+vl=0 \= failed, 1 \= successful
+l=Server Runtime ID
+ct=server
+d=1541672895076
+c=1
+cmp=server
+a=new
+cl=weblogic.server
+v=3.6.1
+s=0

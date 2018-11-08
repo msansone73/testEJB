@@ -1,5 +1,4 @@
 create-server=true
 do-not-show-remove-module-warning=true
 eclipse.preferences.version=1
-publish-on-add-remove=false
 show-on-activity=false
