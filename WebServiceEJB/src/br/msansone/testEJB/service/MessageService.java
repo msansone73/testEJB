@@ -19,10 +19,9 @@ public class MessageService {
 	public MessageService() {
 		super();
 	}
-
-	@EJB
-	@PersistenceContext(unitName="em")
-	private EntityManager em;
+	
+	@PersistenceContext(unitName="emTeste") 
+	protected EntityManager em;
 	
 	@EJB
 	DataAccess<Mensagem> dataAccess;

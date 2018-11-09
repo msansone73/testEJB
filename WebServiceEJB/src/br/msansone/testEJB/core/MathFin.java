@@ -1,6 +1,5 @@
 package br.msansone.testEJB.core;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 
