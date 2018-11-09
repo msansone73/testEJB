@@ -1,5 +1,8 @@
 package br.msansone.testEJB.Model;
 
+import javax.ejb.Stateless;
+
+@Stateless
 public class Resultado extends Retorno {
 
 	private double valFuturo;

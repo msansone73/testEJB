@@ -1,12 +1,14 @@
 package br.msansone.testEJB.Model;
 
 
+import javax.ejb.Stateless;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Stateless
 public class Mensagem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,10 +1,20 @@
 package br.msansone.testEJB.core;
 
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
+
 import br.msansone.testEJB.Model.Resultado;
 
-public class MathFin {
+@Stateless
+@Default
+public class MathFin implements IMath {
 
-	public static Resultado calculaJuros(Double valor, Double juros, Integer anos) {
+	public MathFin() {
+		super();
+	}
+
+	public Resultado calculaJuros(Double valor, Double juros, Integer anos) {
 
 		juros = juros / 100;
 

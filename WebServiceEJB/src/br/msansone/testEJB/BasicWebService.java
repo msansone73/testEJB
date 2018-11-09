@@ -2,6 +2,7 @@ package br.msansone.testEJB;
 
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -9,26 +10,39 @@ import javax.jws.WebService;
 
 import br.msansone.testEJB.Model.Mensagem;
 import br.msansone.testEJB.Model.Resultado;
-import br.msansone.testEJB.core.MathFin;
+import br.msansone.testEJB.core.Comunica;
+import br.msansone.testEJB.core.IMath;
 import br.msansone.testEJB.service.MessageService;
 
 @Stateless
 @WebService
 public class BasicWebService {
+	
+	@EJB
+	MessageService messageServiceInj;
+	
+	@EJB
+	IMath mathFin;
+	
+	@EJB
+	Comunica comunica;
+	
+	
 
 	public BasicWebService() {
+		super();
 	}
 
 	@WebMethod
 	public String criarMensagem(@WebParam(name = "nome") String nome) {
-		return "Ola " + nome + " seja bem vinda a critical! 1.21 " + System.currentTimeMillis();
+		return comunica.format(nome);
 	}
 
 	@WebMethod
 	public Resultado calculaJuros(@WebParam(name = "valInicial") Double valor, @WebParam(name = "juros") Double juros,
 			@WebParam(name = "anos") Integer anos) {
 
-		Resultado resultado = MathFin.calculaJuros(valor, juros, anos);
+		Resultado resultado = mathFin.calculaJuros(valor, juros, anos);
 
 		return resultado;
 	}
@@ -36,24 +50,25 @@ public class BasicWebService {
 	@WebMethod
 	public void gravarMensagem(@WebParam(name = "mensagem") String mensagem) {
 	
-		MessageService messageService = new MessageService();
-		messageService.gravarMensage(new Mensagem(mensagem));
+		messageServiceInj.gravarMensage(new Mensagem(mensagem));
 	}
 
 	@WebMethod
 	public String consultaMensagem(@WebParam(name = "id") Long id) {
 
-		MessageService messageService = new MessageService();
-		return  messageService.retornarMensage(id).getConteudo();
+		return  messageServiceInj.retornarMensage(id).getConteudo();
 		
 	}
 
 	@WebMethod
 	public List<Mensagem> consultaTodasMensagens() {
 		
-
-		MessageService messageService = new MessageService();
-		return  messageService.listarTodas();
+		if (messageServiceInj==null) 
+		{
+			System.out.println("messageServiceInj==null");
+		}
+		
+		return  messageServiceInj.listarTodas();
 
 	}
 }
