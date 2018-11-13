@@ -21,7 +21,6 @@ public class DataAccess<E> {
 
 		Query q = em.createQuery(query);
 		List<E> lista =  q.getResultList();
-		em.close();
 		return lista;
 		
 	}
@@ -29,7 +28,6 @@ public class DataAccess<E> {
 	public List<E> lerDados(EntityManager em, Query q){
 
 		List<E> lista =  q.getResultList();
-		em.close();
 		return lista;
 		
 	}
@@ -38,7 +36,6 @@ public class DataAccess<E> {
 	public void gravarDados(EntityManager em, Object entidade) {
 
 		em.persist(entidade);
-		em.close();
 
 	}
 	
