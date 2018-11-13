@@ -2,6 +2,8 @@
     <wb-module deploy-name="WebServiceEJB">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources/META-INF"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
         <property name="context-root" value="WebServiceEJB"/>
         <property name="java-output-path" value="/WebServiceEJB/build/classes"/>
     </wb-module>

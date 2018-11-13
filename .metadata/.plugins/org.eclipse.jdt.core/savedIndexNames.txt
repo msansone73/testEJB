@@ -30,7 +30,6 @@ INDEX VERSION 1.131+C:\Users\m-sansone\Documents\Git\testEJB\.metadata\.plugins\
 191840872.index
 1394848873.index
 866495595.index
-745222341.index
 2050892677.index
 567392608.index
 1570412174.index
