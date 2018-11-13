@@ -38,9 +38,6 @@ public class MessageDAO {
 	
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void gravarMensage(Mensagem mensagem){	
-		System.out.println("inicio em");
-		System.out.println(em.toString());
-		System.out.println("fim em");
 		dataAccess.gravarDados(em,mensagem);
 	}
 }
