@@ -1,8 +1,6 @@
 package br.msansone.testEJB.core;
 
 import javax.ejb.Stateless;
-import javax.enterprise.inject.Default;
-
 import br.msansone.testEJB.Model.Resultado;
 
 @Stateless

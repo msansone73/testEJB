@@ -18,15 +18,15 @@ import br.msansone.testEJB.service.MessageService;
 @WebService
 public class BasicWebService {
 	
+
 	@EJB
-	MessageService messageServiceInj;
+	MessageService messageService;
 	
 	@EJB
 	IMath mathFin;
 	
 	@EJB
 	Comunica comunica;
-	
 	
 
 	public BasicWebService() {
@@ -50,25 +50,20 @@ public class BasicWebService {
 	@WebMethod
 	public void gravarMensagem(@WebParam(name = "mensagem") String mensagem) {
 	
-		messageServiceInj.gravarMensage(new Mensagem(mensagem));
+		messageService.gravarMensage(new Mensagem(mensagem));
 	}
 
 	@WebMethod
 	public String consultaMensagem(@WebParam(name = "id") Long id) {
 
-		return  messageServiceInj.retornarMensage(id).getConteudo();
+		return  messageService.retornarMensage(id).getConteudo();
 		
 	}
 
 	@WebMethod
 	public List<Mensagem> consultaTodasMensagens() {
-		
-		if (messageServiceInj==null) 
-		{
-			System.out.println("messageServiceInj==null");
-		}
-		
-		return  messageServiceInj.listarTodas();
+			
+		return  messageService.listarTodas();
 
 	}
 }
