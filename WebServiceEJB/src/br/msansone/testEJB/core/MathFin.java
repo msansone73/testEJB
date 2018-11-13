@@ -6,7 +6,6 @@ import javax.enterprise.inject.Default;
 import br.msansone.testEJB.Model.Resultado;
 
 @Stateless
-@Default
 public class MathFin implements IMath {
 
 	public MathFin() {

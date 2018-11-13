@@ -1,7 +1,13 @@
-# List of external plug-in models previously loaded. Timestamp: 1541782245120
+# List of external plug-in models previously loaded. Timestamp: 1542104166264
 file:/C:/Users/m-sansone/.p2/pool/plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/ch.qos.logback.core_1.0.7.v20121108-1250.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/ch.qos.logback.slf4j_1.0.7.v201505121915.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.console.core_1.3.0.20180804-1319.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.eclipse.core.runtime_0.1.0.20170706-1138.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.gonsole_1.3.0.20180804-1319.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.gonsole.branding_1.3.0.20180804-1319.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.gonsole.egit_1.3.0.20180804-1319.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.github.spotbugs.plugin.eclipse_3.1.8.r201810160539-bd2dac1/
 file:/C:/Users/m-sansone/.p2/pool/plugins/com.google.gson_2.8.2.v20180104-1110.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/com.google.guava_21.0.0.v20170206-1425.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/com.google.guava_15.0.0.v201403281430.jar
@@ -25,6 +31,7 @@ file:/C:/Users/m-sansone/.p2/pool/plugins/com.sun.jna_4.5.1.v20180403-1933.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/com.sun.jna.platform_4.5.1.v20180403-1933.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/java_cup.runtime_0.10.0.v201005080400.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/javaewah_1.1.6.v20160919-1400.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/javaewah_0.7.9.v201401101600.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/javax.activation_1.1.0.v201211130549.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/javax.annotation_1.2.0.v201602091430.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/javax.el_2.2.0.v201303151357.jar
@@ -513,7 +520,12 @@ file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jface_3.14.100.v20180828-0
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jface.databinding_1.8.300.v20180828-0836.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jface.text_3.14.0.v20180824-1140.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jgit_5.1.0.201809111528-r.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jgit_4.2.0.201601211800-r.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jgit.archive_5.1.0.201809111528-r.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jgit.archive_4.2.0.201601211800-r.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jgit.http.apache_4.2.0.201601211800-r.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jgit.pgm_4.2.0.201601211800-r.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jgit.ui_4.2.0.201601211800-r.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jpt.common.branding_1.4.1.v201807122215.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jpt.common.core_1.5.1.v201803012210.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.jpt.common.eclipselink.branding_1.3.101.v201807122215.jar
@@ -742,7 +754,7 @@ file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.mylyn.wikitext.tracwiki.ui
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.mylyn.wikitext.twiki_3.0.25.20180620133858.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.mylyn.wikitext.twiki.ui_3.0.25.201806201740.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.mylyn.wikitext.ui_3.0.25.201806201740.jar
-file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.nebula.widgets.tablecombo_1.2.0.201808161734.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.nebula.widgets.tablecombo_1.2.0.201810302204.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.base_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.base.edit_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.extractor.lib_1.5.0.v20180706-1242.jar
@@ -759,18 +771,18 @@ file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.predicates.edit_1.10
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.preferences_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.resources_1.10.0.v20180828-0657.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.resources.edit_1.10.0.v20180706-1242.jar
-file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup_1.10.0.v20180828-0705.jar
-file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.core_1.10.0.v20180714-0556.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup_1.10.0.v20180914-1031.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.core_1.11.0.v20180914-1129.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.doc_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.edit_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.editor_1.10.0.v20180821-1848.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.p2_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.p2.edit_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.sync_1.10.0.v20180706-1242.jar
-file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.ui_1.10.0.v20180904-1112.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.ui_1.11.0.v20180921-0524.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.setup.ui.questionnaire_1.10.0.v20180706-1242.jar
-file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.ui_1.10.0.v20180904-1112.jar
-file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.util_1.10.0.v20180706-1242.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.ui_1.10.0.v20180914-0912.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.util_1.11.0.v20180914-1338.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.workingsets_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.workingsets.edit_1.10.0.v20180706-1242.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.eclipse.oomph.workingsets.editor_1.10.0.v20180904-1112.jar
@@ -1130,6 +1142,7 @@ file:/C:/Users/m-sansone/.p2/pool/plugins/org.junit.platform.launcher_1.1.0.v201
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.junit.platform.runner_1.1.0.v20180327-1502.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.junit.platform.suite.api_1.1.0.v20180327-1502.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.junit.vintage.engine_5.1.0.v20180327-1502.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/org.kohsuke.args4j_2.0.21.v201301150030.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.mozilla.javascript_1.7.5.v201504281450.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.objectweb.asm_6.2.1.v20180823-1831.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.objectweb.asm_5.2.0.v20170126-0011.jar
@@ -1147,3 +1160,6 @@ file:/C:/Users/m-sansone/.p2/pool/plugins/org.w3c.css.sac_1.3.1.v200903091627.ja
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.w3c.dom.events_3.0.0.draft20060413_v201105210656.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.w3c.dom.smil_1.0.1.v200903091627.jar
 file:/C:/Users/m-sansone/.p2/pool/plugins/org.w3c.dom.svg_1.1.0.v201011041433.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.console.core.source_1.3.0.20180804-1319.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.gonsole.egit.source_1.3.0.20180804-1319.jar
+file:/C:/Users/m-sansone/.p2/pool/plugins/com.codeaffine.gonsole.source_1.3.0.20180804-1319.jar
