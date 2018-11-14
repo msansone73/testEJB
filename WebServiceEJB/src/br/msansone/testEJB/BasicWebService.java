@@ -1,5 +1,8 @@
 package br.msansone.testEJB;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -8,11 +11,16 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
+import com.sun.xml.internal.bind.v2.model.util.ArrayInfoUtil;
+
+import br.msansone.testEJB.Model.Grupo;
 import br.msansone.testEJB.Model.Mensagem;
 import br.msansone.testEJB.Model.Resultado;
+import br.msansone.testEJB.Model.Usuario;
 import br.msansone.testEJB.core.Comunica;
 import br.msansone.testEJB.core.IMath;
 import br.msansone.testEJB.service.MessageService;
+import br.msansone.testEJB.service.UsuarioService;
 
 @Stateless
 @WebService
@@ -28,6 +36,8 @@ public class BasicWebService {
 	@EJB
 	Comunica comunica;
 	
+	@EJB
+	UsuarioService usuarioService;
 
 	public BasicWebService() {
 		super();
@@ -50,7 +60,11 @@ public class BasicWebService {
 	@WebMethod
 	public void gravarMensagem(@WebParam(name = "mensagem") String mensagem) {
 	
-		messageService.gravarMensage(new Mensagem(mensagem));
+		Mensagem mensagem2 = new Mensagem();
+		mensagem2.setConteudo(mensagem);
+		mensagem2.setUsuario("msansone");
+		mensagem2.setData(Calendar.getInstance());
+		messageService.gravarMensage(mensagem2);
 	}
 
 	@WebMethod
@@ -66,4 +80,46 @@ public class BasicWebService {
 		return  messageService.listarTodas();
 
 	}
+	
+	@WebMethod
+	public List<Grupo> listarGruposPorNome(
+			@WebParam(name="nome") String nome){
+
+		return usuarioService.listarGruposPorNome(nome);
+	}
+
+	@WebMethod
+	public Usuario criarUsuario(
+			@WebParam(name = "nome") String nome,
+			@WebParam(name = "email") String email,
+			@WebParam(name = "senha") String senha) {
+
+		Grupo grupoU = new Grupo();
+		grupoU.setNome("Usuario");
+		grupoU.setDescricao("Grupo de usuarios.");
+		
+		Grupo grupoA = new Grupo();
+		grupoA.setNome("Admin");
+		grupoA.setDescricao("Grupo de adminstadores.");
+		
+		Usuario usuario= new Usuario();
+		usuario.setNome(nome);
+		usuario.setEmail(email);
+		usuario.setSenha(senha);
+		if (usuario.getEmail().contains("@gmail.com")) {
+			usuario.setGrupos(Arrays.asList(grupoU, grupoA));	
+		}else {
+			usuario.setGrupos(Arrays.asList(grupoU));
+		}
+		
+
+		usuario= usuarioService.salvarUsuario(usuario);
+
+		return usuario;
+		
+	}
+	
+	
+
+	
 }

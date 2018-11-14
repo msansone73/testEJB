@@ -1,11 +1,15 @@
 package br.msansone.testEJB.Model;
 
 
+import java.util.Calendar;
+
 import javax.ejb.Stateless;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Stateless
@@ -14,10 +18,21 @@ public class Mensagem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String conteudo;
+    private String usuario;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Calendar data;
     
     
     
-    public Mensagem() {
+    public Calendar getData() {
+		return data;
+	}
+
+	public void setData(Calendar data) {
+		this.data = data;
+	}
+
+	public Mensagem() {
 	}
     
     public Mensagem(String conteudo) {
@@ -39,6 +54,14 @@ public class Mensagem {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	

@@ -36,8 +36,15 @@ public class DataAccess<E> {
 	public void gravarDados(EntityManager em, Object entidade) {
 
 		em.persist(entidade);
+	
+	}
+
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public Object gravarEntidade(EntityManager em, Object entidade) {
+
+		em.persist(entidade);
+		return entidade;
 
 	}
-	
 
 }
