@@ -87,6 +87,13 @@ public class BasicWebService {
 
 		return usuarioService.listarGruposPorNome(nome);
 	}
+	
+	@WebMethod
+	public List<Usuario> listarUsuarioPorGrupo(
+			@WebParam(name="idGrupo") Integer idGrupo){
+
+		return usuarioService.listarUsuarioPorGrupo(idGrupo);
+	}
 
 	@WebMethod
 	public Usuario criarUsuario(

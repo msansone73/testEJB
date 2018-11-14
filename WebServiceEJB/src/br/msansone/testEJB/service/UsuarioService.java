@@ -32,5 +32,9 @@ public class UsuarioService {
 	public List<Grupo> listarGruposPorNome(String nome){
 		return (List<Grupo>) grupoDAO.LerGruposPorNome(nome);
 	}
+
+	public List<Usuario> listarUsuarioPorGrupo(Integer idGrupo) {
+		return usuarioDAO.listarUsuarioPorGrupo(idGrupo);
+	}
 	
 }
