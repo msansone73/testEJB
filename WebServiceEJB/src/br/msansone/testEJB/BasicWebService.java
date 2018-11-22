@@ -13,13 +13,17 @@ import javax.jws.WebService;
 
 import com.sun.xml.internal.bind.v2.model.util.ArrayInfoUtil;
 
+import br.msansone.testEJB.DAO.ProprietarioDAO;
+import br.msansone.testEJB.Model.Contato;
 import br.msansone.testEJB.Model.Grupo;
 import br.msansone.testEJB.Model.Mensagem;
+import br.msansone.testEJB.Model.Proprietario;
 import br.msansone.testEJB.Model.Resultado;
 import br.msansone.testEJB.Model.Usuario;
 import br.msansone.testEJB.core.Comunica;
 import br.msansone.testEJB.core.IMath;
 import br.msansone.testEJB.service.MessageService;
+import br.msansone.testEJB.service.ProprietarioService;
 import br.msansone.testEJB.service.UsuarioService;
 
 @Stateless
@@ -39,10 +43,29 @@ public class BasicWebService {
 	@EJB
 	UsuarioService usuarioService;
 
+	@EJB
+	ProprietarioService proprietarioService;
+	
 	public BasicWebService() {
 		super();
 	}
 
+	@WebMethod
+	public Proprietario inserirProprietario(@WebParam(name="nome") String nome,
+			@WebParam(name="CPF") String cpf,
+			@WebParam(name="foneResidencial") String foneResidencial,
+			@WebParam(name="foneComercial") String foneComercial,
+			@WebParam(name="emailPessoal") String emailPessoal,
+			@WebParam(name="emailTrabalho") String emailTrabalho) {
+		
+		Proprietario proprietario = new Proprietario();
+		proprietario.setNome(nome);
+		proprietario.setCPF(cpf);
+		proprietario.setContato(new Contato(foneResidencial, foneComercial, emailPessoal, emailTrabalho));
+		
+		return proprietarioService.salvar(proprietario);
+	}
+	
 	@WebMethod
 	public String criarMensagem(@WebParam(name = "nome") String nome) {
 		return comunica.format(nome);

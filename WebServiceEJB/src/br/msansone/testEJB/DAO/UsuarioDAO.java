@@ -15,6 +15,7 @@ import javax.persistence.Query;
 import br.msansone.testEJB.Model.Grupo;
 import br.msansone.testEJB.Model.Usuario;
 import br.msansone.testEJB.dataAccess.DataAccess;
+import br.msansone.testEJB.service.UsuarioService;
 
 @Stateless
 public class UsuarioDAO {
@@ -61,6 +62,15 @@ public class UsuarioDAO {
 		}
 		usuario.setGrupos(gruponovo);
 		return usuario;
+	}
+
+	public Usuario ler(Long id) {
+		Usuario usuario= new Usuario();
+		usuario.setId(new Long(1));
+		Query q = (Query) em.createQuery("select u from Usuario u where u=:usuario")
+				.setParameter("usuario", usuario);
+		List<Usuario> usuarios = dataAccess.lerDados(em, q);
+		return usuarios.size()==0?null:usuarios.get(0);
 	}
 
 }
