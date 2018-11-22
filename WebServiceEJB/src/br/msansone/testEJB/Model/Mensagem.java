@@ -4,10 +4,12 @@ package br.msansone.testEJB.Model;
 import java.util.Calendar;
 
 import javax.ejb.Stateless;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -21,10 +23,20 @@ public class Mensagem {
     private String usuario;
     @Temporal(TemporalType.TIMESTAMP)
     private Calendar data;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Usuario responsavel;
     
     
     
-    public Calendar getData() {
+    public Usuario getResponsavel() {
+		return responsavel;
+	}
+
+	public void setResponsavel(Usuario responsavel) {
+		this.responsavel = responsavel;
+	}
+
+	public Calendar getData() {
 		return data;
 	}
 

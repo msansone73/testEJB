@@ -35,26 +35,18 @@ public class GrupoDAO {
 	
 	public Grupo LerGrupoPorNome(String nome) {
 		
-		System.out.println("LerGrupoPorNome(String nome)");
-		System.out.println("nome="+nome);
-		
 		Query q = em.createQuery("select g from Grupo g where g.nome=:nome")
 				.setParameter("nome", nome);	
 		List<Grupo> grupos = dataAccess.lerDados(em, q);		
-		
-		System.out.println("grupos="+grupos);
 		
 		return grupos.size()==0?null:grupos.get(0);
 
 	}
 	
 	public List<Grupo> LerGruposPorNome(String nome) {
-		
-		System.out.println("Nome= "+nome);
 		Query q = em.createQuery("select t from Grupo t where t.nome=:nome")
 				.setParameter("nome", nome);	
 		List<Grupo> grupos = dataAccess.lerDados(em, q);	
-		System.out.println("grupo= "+grupos);
 		
 		return grupos;
 

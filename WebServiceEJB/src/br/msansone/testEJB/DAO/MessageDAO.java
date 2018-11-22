@@ -10,6 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import br.msansone.testEJB.Model.Mensagem;
+import br.msansone.testEJB.Model.Usuario;
 import br.msansone.testEJB.dataAccess.DataAccess;
 
 @Stateless
@@ -26,6 +27,9 @@ public class MessageDAO {
 	@EJB
 	DataAccess<Mensagem> dataAccess;
 	
+	@EJB
+	UsuarioDAO usuarioDAO;
+	
 	public List<Mensagem> listarTodas(){
 		return dataAccess.lerDados(em, "select t from Mensagem t ");	
 	}
@@ -37,7 +41,10 @@ public class MessageDAO {
 	}
 	
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
-	public void gravarMensage(Mensagem mensagem){	
+	public void gravarMensage(Mensagem mensagem){
+		Usuario usuario = new Usuario();
+		usuario = usuarioDAO.listarUsuarioPorGrupo(1).get(0);
+		mensagem.setResponsavel(usuario);
 		dataAccess.gravarDados(em,mensagem);
 	}
 }

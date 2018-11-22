@@ -8,18 +8,26 @@
 		<item value="827" key="dialogHeight"/>
 		<item value="904" key="dialogWidth"/>
 		<list key="textEntries">
+			<item value="1"/>
+			<item value="1"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.wst.server.ui.ServersView"/>
+			<item value="org.zkoss.eclipse.setting.perspectives.zk_perspective"/>
 		</list>
 		<list key="orderedProviders">
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.ui.perspectives"/>
 		</list>
 		<list key="textArray">
+			<item value="server"/>
+			<item value="zk"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.jst.ejb.ui.internal.wizard.AddSessionBeanWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.zkoss.eclipse.zks.project.zk_project" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jst.ejb.ui"/>
+			<item value="org.zkoss.eclipse.wizards"/>
 		</list>
 	</section>
 </section>
