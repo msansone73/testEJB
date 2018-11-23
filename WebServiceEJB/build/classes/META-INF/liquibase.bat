@@ -1,0 +1,1 @@
+liquibase.bat --classpath=C:\Users\m-sansone\Downloads\liquibase-3.6.2-bin\lib\ojdbc6.jar --driver="oracle.jdbc.OracleDriver" --url="jdbc:oracle:thin:@//localhost:49161/xe"  --username=system --password=oracle --changeLogFile=changelog.xml update

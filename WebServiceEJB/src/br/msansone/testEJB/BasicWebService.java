@@ -56,12 +56,14 @@ public class BasicWebService {
 			@WebParam(name="foneResidencial") String foneResidencial,
 			@WebParam(name="foneComercial") String foneComercial,
 			@WebParam(name="emailPessoal") String emailPessoal,
-			@WebParam(name="emailTrabalho") String emailTrabalho) {
+			@WebParam(name="emailTrabalho") String emailTrabalho,
+			@WebParam(name="celPessoal") String celPessoal,
+			@WebParam(name="celTrabalho") String celTrabalho) {
 		
 		Proprietario proprietario = new Proprietario();
 		proprietario.setNome(nome);
 		proprietario.setCPF(cpf);
-		proprietario.setContato(new Contato(foneResidencial, foneComercial, emailPessoal, emailTrabalho));
+		proprietario.setContato(new Contato(foneResidencial, foneComercial, emailPessoal, emailTrabalho, celPessoal, celTrabalho));
 		
 		return proprietarioService.salvar(proprietario);
 	}

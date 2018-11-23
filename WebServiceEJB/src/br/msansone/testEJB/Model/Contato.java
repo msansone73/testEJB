@@ -18,20 +18,56 @@ public class Contato {
 	private String foneComercial;
 	private String emailPessoal;
 	private String emailTrabalho;
+	private String celPessoal;
+	private String celTrabalho;
 	
 	
 	public Contato() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+		
 	
-	public Contato(String foneResidencial, String foneComercial, String emailPessoal, String emailTrabalho) {
+	public Contato(String foneResidencial, String foneComercial, String emailPessoal, String emailTrabalho,
+			String celPessoal, String celTrabalho) {
 		super();
 		this.foneResidencial = foneResidencial;
 		this.foneComercial = foneComercial;
 		this.emailPessoal = emailPessoal;
 		this.emailTrabalho = emailTrabalho;
+		this.celPessoal = celPessoal;
+		this.celTrabalho = celTrabalho;
 	}
+
+
+
+
+
+
+	public String getFoneResidencial() {
+		return foneResidencial;
+	}
+
+	public void setFoneResidencial(String foneResidencial) {
+		this.foneResidencial = foneResidencial;
+	}
+
+	public String getCelPessoal() {
+		return celPessoal;
+	}
+
+	public void setCelPessoal(String celPessoal) {
+		this.celPessoal = celPessoal;
+	}
+
+	public String getCelTrabalho() {
+		return celTrabalho;
+	}
+
+	public void setCelTrabalho(String celTrabalho) {
+		this.celTrabalho = celTrabalho;
+	}
+
 	public Long getId() {
 		return id;
 	}

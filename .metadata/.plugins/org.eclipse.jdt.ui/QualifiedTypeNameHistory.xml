@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.jws.WebParam"/>
 <fullyQualifiedTypeName name="br.msansone.testEJB.Model.Mensagem"/>
 <fullyQualifiedTypeName name="br.msansone.testEJB.DataAccess"/>
 <fullyQualifiedTypeName name="lombok.Data"/>
 <fullyQualifiedTypeName name="br.msansone.testEJB.Model.Retorno"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.ConstantObject"/>
+<fullyQualifiedTypeName name="javax.lang.model.type.PrimitiveType"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="com.sun.beans.editors.FontEditor"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="javax.ejb.TransactionAttribute"/>
+<fullyQualifiedTypeName name="javax.ejb.TransactionAttributeType"/>
+<fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+<fullyQualifiedTypeName name="javax.ejb.EJB"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.DAO.UsuarioDAO"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.service.UsuarioService"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.service.ProprietarioService"/>
+<fullyQualifiedTypeName name="javax.jws.WebMethod"/>
+<fullyQualifiedTypeName name="javax.jws.WebParam"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.Model.Proprietario"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.DAO.ProprietarioDAO"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.Model.Usuario"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="br.msansone.testEJB.Model.Contato"/>
 </qualifiedTypeNameHistroy>

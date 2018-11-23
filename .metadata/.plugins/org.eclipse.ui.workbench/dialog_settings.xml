@@ -30,4 +30,6 @@
 			<item value="org.zkoss.eclipse.wizards"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+	</section>
 </section>
