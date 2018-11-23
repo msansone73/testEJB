@@ -1,39 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet id="1" author="bob">
-        <createTable tableName="department">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="name" type="varchar(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="active" type="boolean" defaultValueBoolean="true"/>
-        </createTable>
-    </changeSet>
+	<changeSet id="1" author="marcio" dbms="oracle">
 
-	<changeSet id="2" author="marcio">
-		<addColumn tableName="department">
-			<column name="address" type="varchar(255)"/>
-		</addColumn>
-    </changeSet>
+		<createSequence incrementBy="1" maxValue="1000"
+			minValue="1" ordered="true" sequenceName="seqgrupo" startValue="1" />
 
-	<changeSet id="3" author="marcio">
-        <createTable tableName="temporario">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="name" type="varchar(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="active" type="boolean" defaultValueBoolean="true"/>
-        </createTable>
-    </changeSet>
-	
+		<createTable tableName="grupo">
+			<column name="id" type="int">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="nome" type="varchar(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="descricao" type="varchar(255)" />
+		</createTable>
+
+	</changeSet>
+
+	<changeSet id="2" author="marcio" dbms="oracle">
+
+		<createSequence incrementBy="1" maxValue="1000"
+			minValue="1" ordered="true" sequenceName="sequsuario" startValue="1" />
+
+		<createTable tableName="usuario">
+			<column name="id" type="int">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="nome" type="varchar(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="email" type="varchar(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="usuario_grupo">
+			<column name="idUsuario" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="idGrupo" type="int">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint constraintName="fkIdUsuario"
+			referencedTableName="usuario" 
+			baseColumnNames="idUsuario" 
+			baseTableName="usuario_grupo"
+			referencedColumnNames="id" />
+
+		<addForeignKeyConstraint constraintName="fkIdGrupo"
+			referencedTableName="grupo" 
+			baseColumnNames="idGrupo" 
+			baseTableName="usuario_grupo"
+			referencedColumnNames="id" />
+
+
+	</changeSet>
+
 </databaseChangeLog>
