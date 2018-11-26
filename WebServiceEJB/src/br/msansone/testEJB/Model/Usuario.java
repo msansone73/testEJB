@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
 
 
 
@@ -23,6 +25,9 @@ public class Usuario {
 	private String senha;
 	private String email;
 	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name="usuario_grupo",
+    joinColumns=@JoinColumn(name="idUsuario"),
+    inverseJoinColumns=@JoinColumn(name="idGrupo"))
 	private List<Grupo> grupos;
 	public List<Grupo> getGrupos() {
 		return grupos;

@@ -1,19 +1,13 @@
 package br.msansone.testEJB;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.Calendar;
 import java.util.List;
-
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
-
-import com.sun.xml.internal.bind.v2.model.util.ArrayInfoUtil;
-
-import br.msansone.testEJB.DAO.ProprietarioDAO;
 import br.msansone.testEJB.Model.Contato;
 import br.msansone.testEJB.Model.Grupo;
 import br.msansone.testEJB.Model.Mensagem;
@@ -45,6 +39,8 @@ public class BasicWebService {
 
 	@EJB
 	ProprietarioService proprietarioService;
+
+	
 	
 	public BasicWebService() {
 		super();
@@ -132,24 +128,11 @@ public class BasicWebService {
 			@WebParam(name = "email") String email,
 			@WebParam(name = "senha") String senha) {
 
-		Grupo grupoU = new Grupo();
-		grupoU.setNome("Usuario");
-		grupoU.setDescricao("Grupo de usuarios.");
-		
-		Grupo grupoA = new Grupo();
-		grupoA.setNome("Admin");
-		grupoA.setDescricao("Grupo de adminstadores.");
-		
+			
 		Usuario usuario= new Usuario();
 		usuario.setNome(nome);
 		usuario.setEmail(email);
-		usuario.setSenha(senha);
-		if (usuario.getEmail().contains("@gmail.com")) {
-			usuario.setGrupos(Arrays.asList(grupoU, grupoA));	
-		}else {
-			usuario.setGrupos(Arrays.asList(grupoU));
-		}
-		
+		usuario.setSenha(senha);		
 
 		usuario= usuarioService.salvarUsuario(usuario);
 

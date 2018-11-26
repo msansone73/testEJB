@@ -1,6 +1,7 @@
 package br.msansone.testEJB.service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -31,6 +32,12 @@ public class UsuarioService {
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public Usuario salvarUsuario(Usuario usuario) {
 
+		Grupo grupo = null;
+		if (usuario.getGrupos()==null || usuario.getGrupos().size()==0) {
+			grupo = grupoDAO.LerGrupoPorNome("Admin");
+			List<Grupo> grupos = Arrays.asList(grupo); 
+			usuario.setGrupos(grupos);
+		}
 		return usuarioDAO.gravarUsuario(usuario);
 	}
 	
