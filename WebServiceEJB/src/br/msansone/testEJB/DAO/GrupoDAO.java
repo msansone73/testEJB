@@ -1,5 +1,6 @@
 package br.msansone.testEJB.DAO;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -28,9 +29,21 @@ public class GrupoDAO {
 	@EJB
 	DataAccess<Grupo> dataAccess;
 	
+	private Long getSequenceGrupo() {
+
+		Query q = em.createNativeQuery("SELECT seqgrupo.NEXTVAL FROM DUAL");
+		return  ((BigDecimal) q.getSingleResult()).longValueExact();
+		
+	}
+	
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public Grupo salvar(Grupo grupo){
-		return (Grupo) dataAccess.gravarEntidade(em, grupo);
+		if (grupo.getId()==null) {
+			
+			grupo.setId(getSequenceGrupo()); 
+			
+		} 
+		return em.merge(grupo);
 	}
 	
 	public Grupo LerGrupoPorNome(String nome) {

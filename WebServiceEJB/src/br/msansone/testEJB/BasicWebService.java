@@ -51,6 +51,12 @@ public class BasicWebService {
 	}
 
 	@WebMethod
+	public Grupo inserirGrupo(@WebParam(name="nome") String nome,
+			@WebParam(name="descricao") String descricao) {
+		return usuarioService.salvar(new Grupo(nome, descricao));
+	}
+	
+	@WebMethod
 	public Proprietario inserirProprietario(@WebParam(name="nome") String nome,
 			@WebParam(name="CPF") String cpf,
 			@WebParam(name="foneResidencial") String foneResidencial,

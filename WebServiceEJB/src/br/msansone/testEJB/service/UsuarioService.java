@@ -24,6 +24,11 @@ public class UsuarioService {
 	GrupoDAO grupoDAO;
 	
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public Grupo salvar(Grupo grupo) {
+		return grupoDAO.salvar(grupo);
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public Usuario salvarUsuario(Usuario usuario) {
 
 		return usuarioDAO.gravarUsuario(usuario);

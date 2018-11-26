@@ -19,7 +19,18 @@ public class Grupo {
 	private Long id;
 	private String nome;
 	private String descricao;
-	
+		
+	public Grupo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Grupo(String nome) {
+		this.nome=nome;
+	}
+	public Grupo(String nome2, String descricao2) {
+		this.nome=nome2;
+		this.descricao=descricao2;
+	}
 	public Long getId() {
 		return id;
 	}
