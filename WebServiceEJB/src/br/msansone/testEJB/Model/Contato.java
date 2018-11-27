@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 
 
 @Entity
@@ -12,7 +14,6 @@ import javax.persistence.Id;
 public class Contato {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String foneResidencial;
 	private String foneComercial;
@@ -24,7 +25,6 @@ public class Contato {
 	
 	public Contato() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 		
 	

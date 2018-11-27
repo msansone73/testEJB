@@ -19,9 +19,8 @@ UsuarioDAO usuarioDAO;
 
 public Proprietario salvar(Proprietario proprietario) {
 
-	Usuario usuario= usuarioDAO.ler(1L);
+	Usuario usuario= usuarioDAO.lerUsuarioByEmail("msansone@gmail.com");
 	proprietario.setUsuario(usuario);
-	
 	proprietarioDAO.salvar(proprietario);
 	return proprietario;
 }

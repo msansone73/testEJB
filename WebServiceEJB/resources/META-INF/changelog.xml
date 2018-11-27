@@ -65,7 +65,7 @@
 			referencedColumnNames="id" />
 
 	</changeSet>
-	
+
 	<changeSet id="4" author="marcio">
 		<addColumn tableName="usuario">
 			<column name="senha" type="varchar(50)">
@@ -74,5 +74,46 @@
 		</addColumn>
 	</changeSet>
 
+	<changeSet id="5" author="marcio">
+
+		<createTable tableName="contato">
+			<column name="id" type="int">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="foneResidencial" type="varchar(15)"/>
+			<column name="foneComercial" type="varchar(15)"/>
+			<column name="emailPessoal" type="varchar(150)"/>
+			<column name="emailTrabalho" type="varchar(150)"/>
+			<column name="celPessoal" type="varchar(15)"/>
+			<column name="celTrabalho" type="varchar(15)"/>
+		</createTable>
+
+		<createTable tableName="proprietario">
+			<column name="id" type="int">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="nome" type="varchar(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="cpf" type="varchar(255)" />
+			<column name="idUsuario" type="int">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint
+			constraintName="fkIdUsuarioPropritario" 
+			baseTableName="proprietario"
+			baseColumnNames="idUsuario" 
+			referencedTableName="usuario"
+			referencedColumnNames="id" />
+			
+		<createSequence incrementBy="1" maxValue="1000"
+			minValue="1" ordered="true" sequenceName="seqproprietario" startValue="1" />
+
+		<createSequence incrementBy="1" maxValue="1000"
+			minValue="1" ordered="true" sequenceName="seqcontato" startValue="1" />
+
+	</changeSet>
 
 </databaseChangeLog>

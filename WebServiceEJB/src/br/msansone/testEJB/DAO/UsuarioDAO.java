@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import br.msansone.testEJB.Model.Grupo;
 import br.msansone.testEJB.Model.Usuario;
@@ -83,6 +84,16 @@ public class UsuarioDAO {
 				.setParameter("usuario", usuario);
 		List<Usuario> usuarios = dataAccess.lerDados(em, q);
 		return usuarios.size()==0?null:usuarios.get(0);
+	}
+
+	public Usuario lerUsuarioByEmail(String email) {
+		Usuario usuario= new Usuario();
+		final String qstring = "select u from Usuario u where u.email=:email";
+		TypedQuery<Usuario> query = em.createQuery(qstring, Usuario.class);
+		query.setParameter("email", email);
+		usuario = query.getSingleResult();
+		System.out.println("usuario encontrado= "+usuario.getNome());
+		return usuario;
 	}
 
 }
